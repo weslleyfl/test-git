@@ -1,2 +1,1 @@
-const express = required()
-console.log("ola2");
+const express = require('express')
