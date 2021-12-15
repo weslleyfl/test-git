@@ -8,3 +8,32 @@ git config --global core.editor code
 
 -- Comandos
 git status -s
+
+
+Commandos para o atalho
+! na execuçao do comando com shell command
+s = !git status -s
+c = !git add --all && git commit -m
+lg = log --graph --format
+
+commit este arquivo aqui, junto com o commit anterior - voce consegue juntar em um commit so
+git commit --amend --no-edit
+
+-Alterar o branch master para o main - o que esta no github
+# create main branch locally, taking the history from master
+git branch -m master main
+
+Error: fatal: refusing to merge unrelated histories
+git pull origin master --allow-unrelated-histories
+
+
+-- Colocar o arquivo na area de rascunho - stash
+git add .
+git stash -- Saved working directory and index state WIP on main: 38a49e4 pull para atualizar os arquivos
+
+Para voltar ao stash 
+git stash apply 
+ou
+git stash pop  --- remover o arquivo ou limpa a area de stash
+clear
+list
