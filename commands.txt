@@ -1,0 +1,10 @@
+git config --system --edit ---- arquivo do usuario
+git config --local --edit ---- arquivo local -- este tem prioridade 
+git config --global --edit --- arquivo do usuario
+
+--- para colocar o vs code como editor
+git config --global core.editor code
+
+
+-- Comandos
+git status -s
