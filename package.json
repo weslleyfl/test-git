@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/weslleyfl/test-git/issues"
   },
-  "homepage": "https://github.com/weslleyfl/test-git#readme"
+  "homepage": "https://github.com/weslleyfl/test-git#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
