@@ -91,3 +91,11 @@ git tag 1.0 -m "realease 1.0" -- tag anotadas
 git tag -a "0.1.beta" -m "realease 0.1.beta" e5d09f -- tag anotada para um commit antigo/anterior 
 
 git push origin main --follow-tags -- para subir as tags anotadas para o github / servidor (--tags - manda todas as tags ate as nao anotadas)
+
+[alias]
+[push]
+followTags = true   --- para incluir automaticamente em todos os push as tags nomeadas 
+
+remover a tag
+git tag -d "1.0"  --- removendo local 
+git push --delete origin "0.1.beta"  ---- removendo do github / servidor
