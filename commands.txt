@@ -99,3 +99,18 @@ followTags = true   --- para incluir automaticamente em todos os push as tags no
 remover a tag
 git tag -d "1.0"  --- removendo local 
 git push --delete origin "0.1.beta"  ---- removendo do github / servidor
+
+--- Aula 4
+
+Git Reset   --soft muito usado para renomear o seu commit ele volta para o stage
+			--mixed é o padrao. ele volta para o local workspace - ele nao modifica esta area
+			--hard - desfaz tudo que voce fez tanto no workspace e na area de index/stage e commit tambem 
+Reset Limpa tudo (arquivos) que esta acima
+
+Git Revert
+Reverter um commit -- manda para a area de stage
+Ele nao limpa tudo que esta acima dele, ele cria um novo commit acima da arvore
+git revert 789997 --no-edit --- ele nao abre o editor para voce confirmar/conferir
+--no-commit --- nao gera o commit automatico
+
+---- aula 5
