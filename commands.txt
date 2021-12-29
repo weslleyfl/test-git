@@ -153,3 +153,16 @@ git rm -r --> remove dentro da pasta
 
 git rm 'nomarquivo.js' --cached --> para forçar o git untracked o arquivo - deixou de traquiar o arquivo
 
+--- Aula 6 Git - Rebase Interativo
+
+Rebase - Alterar uma historia - alterar commits --> Vai gerar um menu de comandos onde voce escolhe o que voce quer fazer
+git rebase -i HEAD~5 --- > Voce consegue visualizar todos os commits acima dos 5 especificado e com isso
+voce pode renomear o texto dos commits que quiser (reescrever a historia)
+-Renomear commit
+-Juntar varios commits em um so --> git rebase -i HEAD~3
+
+
+-- Git reflog
+Te mostar tudo que voce fez no git -- todos os commits
+
+-- git show 434t56
