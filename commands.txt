@@ -113,4 +113,43 @@ Ele nao limpa tudo que esta acima dele, ele cria um novo commit acima da arvore
 git revert 789997 --no-edit --- ele nao abre o editor para voce confirmar/conferir
 --no-commit --- nao gera o commit automatico
 
----- aula 5
+-- Aula 5 Git - Rm, Clean e Checkout
+
+git checkout
+git checkout . ou o nome do arquivo --> ele vai desfazer as alterações no arquivo ou recuperar o arquivo todo 
+Ele nao funciona em arquivo untracked e so funciona na workspace (unstaged) (nao funciona na area de stage/index git add .)
+Voce pode usar o git reset para voltar o arquivo para o estado anterior, caso ele esteja na area de staged.
+
+git checkout - permitir investigar um commit - verificar como era o codigo naquele momento/versao 
+git checkout 699freou ou a tag 
+Voce vai para um modo desconectado, fora de uma branch  , voce fica em uma branch temporaria
+
+git checkout "branch" -- voce consegue mudar de branch 
+Caso voce queira mudar o codigo neste ponto do tempo, voce tem que criar uma branch nova, no momento que voce estiver dentro da branch temporaria
+git checkout -b 'fix/index' (nome da branch) --> para criar uma branch com o checkout
+
+git clean 
+git clean -n -> serve para remover um arquivo que esta como untracked 
+-n --> te mostra quais arquivo serao removidos antes de remover - boa pratica colocar neste comando 
+git clean -f --> para remover, se nao ele nao remover  
+
+fatal: clean.requireForce defaults to true and neither -i, -n, nor -f given; refusing to clean
+Caso voce queira alterar o comportamento padrao de nao apagar o arquivo direto 
+git config --local clean.requireForce false
+git config --edit
+--global 
+--local
+--system
+git clean --> por padrao nao remover arquivo untracked dentro de pasta 
+Ex: Teste/Index.js 
+nao vai remover o arquivo index pois ele esta dentro da pasta Teste/
+Para isso, voce tem que passar o flag 
+git clean -nd --> ai remover dentro da pasta (ou so -d)
+ 
+git rm
+git rm --> apagar arquivo ja traquiado pelo git tracked (commit)
+git rm 'nomedoarqivo.js'
+git rm -r --> remove dentro da pasta
+
+git rm 'nomarquivo.js' --cached --> para forçar o git untracked o arquivo - deixou de traquiar o arquivo
+
